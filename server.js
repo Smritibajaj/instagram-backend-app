@@ -44,7 +44,7 @@ app.options("*", function (req, res) {
 });
 
 require("./routes/index")(app);
-app.use("/", (req, res) => res.send("hello js"));
+//app.use("/", (req, res) => res.send("hello js"));
 app.use(handleNotFound);
 
 module.exports = app;
