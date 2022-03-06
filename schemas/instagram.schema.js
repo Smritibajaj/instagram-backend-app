@@ -18,12 +18,12 @@ const InstagramSchema = mongoose.Schema(
   }
 );
 
-InstagramSchema.set("toJSON", {
-  transform: (doc, ret, opt) => {
-    delete ret.access_token;
-    return ret;
-  },
-});
+// InstagramSchema.set("toJSON", {
+//   transform: (doc, ret, opt) => {
+//     delete ret.access_token;
+//     return ret;
+//   },
+// });
 
 InstagramSchema.virtual("posts", {
   ref: "post",
