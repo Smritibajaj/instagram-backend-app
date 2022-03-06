@@ -6,8 +6,9 @@ const { SERVER_PORT, DATABASE, ENV } = require('../configs/app.config');
 if(ENV === 'DEVELOPMENT') {
     mongoose.set("debug", true);
 }
+//mongodb://localhost:27017/insta
 const getDbUri = () => {
-    return `mongodb://localhost:27017/insta`;
+    return `mongodb+srv://${DATABASE.MONGO.username}:${DATABASE.MONGO.password}@${DATABASE.MONGO.host}/${DATABASE.MONGO.database}?retryWrites=true&w=majority`;
 }
 
 const URI = getDbUri();
