@@ -6,7 +6,7 @@ const { handleNotFound } = require("./middlewear/error");
 const cors = require("cors");
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "'https://instagram-clone1-app.herokuapp.com");
+  res.setHeader("Access-Control-Allow-Origin", "https://insta-clone-client.netlify.app");
   res.setHeader("Access-Control-Allow-Credentials", "true");
   res.setHeader("Access-Control-Max-Age", "1800");
   res.setHeader(
