@@ -5,6 +5,7 @@ const InstagramService = {
     getShortTimeAccessToken: async(client_id, client_secret, grant_type,redirect_uri, code) => {
 
         try {
+          console.log('its here');
             const params = new URLSearchParams();
             params.append("client_id", client_id);
             params.append("client_secret", client_secret);

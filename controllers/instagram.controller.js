@@ -6,6 +6,7 @@ const PostService  = require("../services/post.service");
 const InstagramController = {
   getUser: async (req, res, next) => {
     try {
+      console.log('coming in service');
       const { redirect_uri, code } = req.body;
       const client_id = InstagramConfig.INSTAGRAM_APP;
       const client_secret = InstagramConfig.INSTAGRAM_SECRET;
@@ -24,6 +25,7 @@ const InstagramController = {
       );
       const user = await InstagramService.getUserProfile(longTimeAccessToken.access_token)
       const existingUser = await InstagramService.getUserByUserName(user[0].username);
+      console.log(user);
       if(existingUser){
         const posts = await PostService.getAllPosts(user[0].username);
         return res.status(httpStatus.OK).json({
