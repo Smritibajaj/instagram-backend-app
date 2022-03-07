@@ -1,6 +1,6 @@
 module.exports = {
-    INSTAGRAM_APP: 355608546470738,
-    INSTAGRAM_SECRET: "bc7e05d62ddd2656ba0a9af73c1f053f",
+    INSTAGRAM_APP: 7204929049549462,
+    INSTAGRAM_SECRET: "ff8f729fadd7b2ed601de566c24a9ad4",
     GRANT_TYPE: "authorization_code",
     FIELDS: `caption,id,media_tye,media_url,thumbnail_url_timestamps,username`,  
 }
