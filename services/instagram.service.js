@@ -5,12 +5,12 @@ const InstagramService = {
     getShortTimeAccessToken: async(client_id, client_secret, grant_type,redirect_uri, code) => {
 
         try {
-          console.log('its here');
+          console.log('its', redirect_uri)
             const params = new URLSearchParams();
             params.append("client_id", client_id);
             params.append("client_secret", client_secret);
             params.append("grant_type", grant_type);
-            params.append("redirect_uri", 'https://localhost:3000/');
+            params.append("redirect_uri", redirect_uri);
             params.append("code", code);
         
             // send form based request to Instagram API
